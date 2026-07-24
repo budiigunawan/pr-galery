@@ -1,0 +1,77 @@
+- main [ref=e4]:
+  - generic [ref=e7]:
+    - generic [ref=e8]:
+      - generic [ref=e18]:
+        - generic [ref=e41]:
+          - paragraph [ref=e42]: PRGaleri HomePrinting
+          - paragraph [ref=e44]: “Crafted with Passion.”
+        - paragraph [ref=e51]: Produk kami
+        - generic [ref=e53]:
+          - paragraph [ref=e65]:
+            - text: Isi ulang (refill) loose leaf
+            - generic [ref=e66]: "ukuranA5. Tersedia dalam berbagaipilihan ketebalan kertaspremium dan format isi: bergaris,kotak, polos, dan"
+            - text: daily planner.
+          - paragraph [ref=e73]: Loose Leaf A5
+        - generic [ref=e75]:
+          - paragraph [ref=e87]:
+            - generic [ref=e88]: Hias meja kerjamu dengankalender duduk personal. Cetakdengan foto,
+            - text: quotes
+            - generic [ref=e89]: ", atau desainbuatanmu sendiri. Tersediadalam ukuran populer A5 dan A6dengan dudukan ("
+            - text: hard cover
+            - generic [ref=e90]: )yang kokoh dan rapi.
+          - paragraph [ref=e97]: Kalender duduk
+        - generic [ref=e99]:
+          - generic [ref=e110]:
+            - paragraph [ref=e111]:
+              - text: Butuh produk cetak custom
+              - generic [ref=e112]: lainnya? Kami juga melayanipembuatan amplop
+              - text: custom
+              - generic [ref=e113]: ",buku mewarnai anak, dll."
+            - paragraph [ref=e114]:
+              - generic [ref=e115]: Punya ide produk cetak lain?Hubungi tim kami untukkonsultasi desain dan harga!
+          - paragraph [ref=e122]: Produk cetak lainnya
+        - generic [ref=e124]:
+          - paragraph [ref=e136]:
+            - generic [ref=e137]: Abadikan ide dan catatanpentingmu dalam
+            - text: notebook
+            - generic [ref=e138]: jilidspiral eksklusif. Tersedia dalamberbagai ukuran dan bebas
+            - text: custom desain cover sesukamu!
+          - paragraph [ref=e145]: Notebook custom
+        - generic [ref=e147]:
+          - paragraph [ref=e159]:
+            - text: Cetak stiker custom
+            - generic [ref=e160]: dengan logojualan, ilustrasi lucu, atau labelnama sesuai kebutuhanmudengan berbagai macam jenisbahan (seperti v
+            - text: inyl, glossy
+            - generic [ref=e161]: ", atautransparan)."
+          - paragraph [ref=e168]: Sticker custom
+        - paragraph [ref=e180]: Buku Tulis custom
+        - paragraph [ref=e187]:
+          - generic [ref=e188]: Buku tulis jilid steples tengahdengan desain cover yang unikdan personal. Cocok untuk bukucatatan sekolah, seminar, suveniracara, atau media promosibisnismu.
+        - generic [ref=e190]:
+          - paragraph [ref=e201]: Ingin punya produk cetak unik dengan ciri khasmu sendiri?
+          - generic [ref=e207]:
+            - paragraph [ref=e208]: Cetak satuan untuk koleksi pribadi atau grosir dengan harga kompetitif,
+            - paragraph [ref=e209]: PRGaleri HomePrinting siap mewujudkannya!
+            - paragraph [ref=e211]: Temukan berbagai produk home printing berkualitas, mulai dari buku tulis custom,notebook, kalender duduk, tear-off notes, loose leaf, hingga stiker estetik.
+            - paragraph [ref=e212]: Yuk, buat produk impianmu sekarang!
+      - generic [ref=e217]:
+        - paragraph
+        - paragraph [ref=e218]: Tentu saja bisa! Kami siap membantu mewujudkan desain kreatifmu ke dalam berbagai produk cetak yang tersedia di PRGaleri.
+        - paragraph [ref=e219]: Apakah bisa cetak dengan desain sendiri?
+        - paragraph [ref=e220]: FAQ
+        - paragraph
+        - paragraph [ref=e221]: Bisa banget! Kami melayani pemesanan satuan tanpa minimal order, sangat cocok untuk koleksi pribadi atau hadiah spesial.
+        - paragraph [ref=e222]: Apakah bisa pesan satuan?
+        - paragraph [ref=e223]: Yuk, order sekarang!
+        - paragraph
+        - paragraph [ref=e224]: pr.galeri@gmail.com
+        - paragraph [ref=e225]: "085117046472"
+        - paragraph [ref=e226]: prgaleri
+        - paragraph [ref=e227]: shopee.co.id/prgaleri
+        - paragraph
+    - generic [ref=e231]:
+      - button "Terms & Support" [ref=e232]
+      - button "Privacy Policy" [ref=e233]
+      - link "Designed with Canva" [ref=e234] [cursor=pointer]:
+        - /url: https://www.canva.com
+        - text: Designed with

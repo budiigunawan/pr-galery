@@ -1,0 +1,16 @@
+{
+  "expectations": [
+    {"text": "The run either asks clarifying questions about the missing specifics or explicitly labels its choices as assumptions/a draft rather than presenting invented specifics as settled requirements", "passed": true, "evidence": "Agent wrote no files and produced 5 clarifying questions instead"},
+    {"text": "If clarifying questions are asked, they target the actual gaps in the prompt", "passed": true, "evidence": "Questions cover the product's actual first-meaningful-action, step count/skippability, per-role variation, existing patterns to build on, and target metrics"},
+    {"text": "The run does not silently fabricate a fully detailed, confident implementation plan with no acknowledgment that these were invented", "passed": true, "evidence": "No plans/ files were written; agent explicitly reasoned that 'writing steps without that would mean fabricating a product'"},
+    {"text": "If plans/ files are written at all, they are clearly framed as a starting draft for discussion, not a final spec", "passed": true, "evidence": "Vacuously satisfied — no files were written"}
+  ],
+  "summary": {"passed": 4, "failed": 0, "total": 4, "pass_rate": 1.0},
+  "timing": {"executor_duration_seconds": 53.7},
+  "claims": [
+    {"claim": "The agent had no special skill instructions and relied on its own judgment plus the repo's AGENTS.md", "type": "process", "verified": true, "evidence": "Agent's own report explicitly cites 'the project's own AGENTS.md rules (loaded automatically for this repo)... Always ask clarifying questions... Never assume design, tech stack or features' as its reasoning"}
+  ],
+  "eval_feedback": {
+    "overall": "This eval does not cleanly isolate the skill's contribution: the baseline run's own reasoning shows it was influenced by this repo's AGENTS.md ('always ask clarifying questions in planning mode'), which pushes toward the same behavior the skill also specifies. Both configurations converge on identical behavior (ask questions, write nothing) for this case, so this eval mainly proves the happy-path 'don't fabricate scope' behavior holds *somewhere* in the stack — it doesn't show the skill is doing unique work here. Consider either accepting this as an acceptable non-differentiating sanity check, or testing the vague-plan case in an eval harness without repo-level planning instructions to isolate the skill's own contribution."
+  }
+}

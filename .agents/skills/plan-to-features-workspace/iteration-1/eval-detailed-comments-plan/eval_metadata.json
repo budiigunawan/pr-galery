@@ -1,0 +1,18 @@
+{
+  "eval_id": 0,
+  "eval_name": "detailed-comments-plan",
+  "prompt": "I want to convert this plan into features. We're adding a comments system to our blog (Next.js + Postgres via Prisma). Plan: Readers who are logged in can post a comment on a blog post. Comments support plain text only (no markdown/rich text for v1), max 2000 characters. Comments are shown newest-first under the post, paginated 20 at a time. Authors of the blog post (not just any logged-in user) can delete any comment on their own post; comment authors can delete their own comments too. Deleted comments show as \"[deleted]\" rather than disappearing, to preserve reply threads. We need one level of nested replies (replies to a comment), but no reply-to-reply. New comments should trigger an email notification to the post author (not to other commenters) via our existing email service (Resend). We also need basic spam protection: rate-limit to 5 comments per user per 10 minutes, and a simple banned-word filter that blocks submission and shows an inline error. Please convert this into features per our plan-to-features format.",
+  "assertions": [
+    {"text": "plans/REQUIREMENTS.md exists", "type": "file_exists"},
+    {"text": "plans/features/ directory contains at least 3 feature files", "type": "file_count"},
+    {"text": "Feature filenames follow the 'NN - name.md' zero-padded pattern (01, 02, ...)", "type": "naming"},
+    {"text": "REQUIREMENTS.md contains a feature index that links out to each feature file", "type": "content"},
+    {"text": "Every feature file contains a Requirements section, a Technical Implementation section, and an Acceptance Criteria section", "type": "content"},
+    {"text": "Acceptance criteria are written as checkable checklist items (e.g. '- [ ]')", "type": "content"},
+    {"text": "The 2000-character comment limit and 20-per-page pagination detail from the plan both appear somewhere in the feature files", "type": "content"},
+    {"text": "The 5-comments-per-10-minutes rate limit and banned-word filter both appear somewhere in the feature files", "type": "content"},
+    {"text": "The soft-delete '[deleted]' behavior and the author-vs-self delete permission distinction both appear somewhere in the feature files", "type": "content"},
+    {"text": "Resend (email) and Prisma/Postgres are referenced in the relevant feature's technical implementation, not just restated generically", "type": "content"},
+    {"text": "One-level-only nested replies (no reply-to-reply) is captured as an explicit constraint somewhere", "type": "content"}
+  ]
+}

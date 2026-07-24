@@ -1,0 +1,16 @@
+{
+  "expectations": [
+    {"text": "The run either asks clarifying questions about the missing specifics or explicitly labels its choices as assumptions/a draft rather than presenting invented specifics as settled requirements", "passed": true, "evidence": "Agent stopped after Step 1 and produced 7 clarifying questions instead of writing files; report quotes the skill's own instruction ('ask clarifying questions now rather than guessing... resolve ambiguity before writing files')"},
+    {"text": "If clarifying questions are asked, they target the actual gaps in the prompt", "passed": true, "evidence": "Questions cover: concrete onboarding steps/first-meaningful-action, per-user-type variation, success metric, skippability, progress persistence location, tech stack, non-goals — directly maps to every gap in the prompt"},
+    {"text": "The run does not silently fabricate a fully detailed, confident implementation plan with no acknowledgment that these were invented", "passed": true, "evidence": "No plans/ files were written; agent explicitly reasoned that writing a draft would mean guessing 'the one thing the skill explicitly forbids guessing'"},
+    {"text": "If plans/ files are written at all, they are clearly framed as a starting draft for discussion, not a final spec", "passed": true, "evidence": "Vacuously satisfied — no files were written in this run"}
+  ],
+  "summary": {"passed": 4, "failed": 0, "total": 4, "pass_rate": 1.0},
+  "timing": {"executor_duration_seconds": 53.0},
+  "claims": [
+    {"claim": "Even a lightweight draft breakdown would require guessing scope the skill forbids guessing", "type": "quality", "verified": true, "evidence": "Correct given the prompt: no onboarding steps, no stack, no success metric, and no scope boundaries were provided — any feature list would be invented from nothing"}
+  ],
+  "eval_feedback": {
+    "overall": "Skill instructions were followed correctly and the questions are on-target. No issues found."
+  }
+}

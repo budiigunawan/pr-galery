@@ -1,0 +1,25 @@
+{
+  "expectations": [
+    {"text": "plans/REQUIREMENTS.md exists", "passed": true, "evidence": "File present at plans/REQUIREMENTS.md"},
+    {"text": "plans/features/ contains at least 3 feature files named 'NN - name.md' with zero-padded numbers", "passed": true, "evidence": "6 files: '01 - comment-data-model.md' through '06 - comment-email-notification.md', all matching the zero-padded 'NN - name.md' pattern exactly"},
+    {"text": "REQUIREMENTS.md contains a feature index linking to each feature file", "passed": true, "evidence": "'## Feature Index' table with 6 rows, each linking via markdown to 'features/NN%20-%20name.md'"},
+    {"text": "Every feature file has Requirements, Technical Implementation, and Acceptance Criteria sections", "passed": true, "evidence": "grep confirms exactly one '## Requirements', '## Technical Implementation', '## Acceptance Criteria' in all 6 files"},
+    {"text": "Acceptance criteria are checklist items ('- [ ]')", "passed": true, "evidence": "6-9 checklist items per file, e.g. 7 in 01, 9 in 02"},
+    {"text": "The 2000-character limit and 20-per-page pagination both appear somewhere in the feature files", "passed": true, "evidence": "01 - comment-data-model.md:18 states the 2000-char max and VarChar(2000) constraint; 03 - comment-display-and-pagination.md states 20-per-page pagination"},
+    {"text": "The 5-per-10-minutes rate limit and banned-word filter both appear somewhere in the feature files", "passed": true, "evidence": "05 - spam-and-abuse-protection.md:6,14 states '5 comments per 10 minutes' and a 10-minute window with rejection on the 6th attempt; banned-word filter covered in the same file"},
+    {"text": "The '[deleted]' soft-delete behavior and author-vs-self delete permission distinction both appear somewhere", "passed": true, "evidence": "04 - comment-deletion.md:5-7 explicitly distinguishes 'the author of a blog post delete any comment on their own post' vs 'a comment's author delete their own comment', and describes the row surviving as [deleted]"},
+    {"text": "Resend and Prisma/Postgres are referenced in the relevant feature's technical implementation", "passed": true, "evidence": "06 - comment-email-notification.md references the project's existing Resend integration with implementation detail (try/catch around the API call); 01 - comment-data-model.md gives an actual Prisma schema snippet"},
+    {"text": "One-level-only nested replies is captured as an explicit constraint", "passed": true, "evidence": "01 - comment-data-model.md:14 'Replies are exactly one level deep: a comment that already has a [parent] cannot itself be replied to'; repeated in 03"}
+  ],
+  "summary": {"passed": 10, "failed": 0, "total": 10, "pass_rate": 1.0},
+  "timing": {"executor_duration_seconds": 282.8},
+  "claims": [
+    {"claim": "Nesting/replies were kept inside the submission+display features rather than split into their own feature file", "type": "process", "verified": true, "evidence": "No separate 'nested-replies' feature file exists; content is inside 02 and 03, consistent with the agent's stated reasoning that replies aren't independently shippable"}
+  ],
+  "eval_feedback": {
+    "suggestions": [
+      {"reason": "Both with_skill and without_skill runs fully covered every content expectation (2000-char limit, rate limit, Resend, Prisma, soft-delete, permissions, one-level nesting) — a capable model produces this content even without the skill. The content-coverage expectations aren't very discriminating for this eval; the naming-convention and section-header-exactness expectations are what actually separated the two runs. Consider weighting or noting that structural/format fidelity, not scope coverage, is this eval's real signal."}
+    ],
+    "overall": "All expectations pass with genuine, non-superficial evidence. The feature split, build ordering, and technical depth are strong. Structural fidelity to the skill's exact template (naming, section names, feature index) is the main differentiator from the baseline."
+  }
+}

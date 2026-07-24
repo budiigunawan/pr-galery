@@ -1,0 +1,11 @@
+{
+  "eval_id": 1,
+  "eval_name": "vague-onboarding-plan",
+  "prompt": "Break down our new onboarding flow plan into implementation-ready features and put it in the plans folder. The idea: right now when someone signs up they just land on an empty dashboard and have no idea what to do. We want a guided onboarding flow that gets them to their first meaningful action faster. Should probably have a few steps and some kind of progress indicator. We haven't picked exact steps yet, just know it needs to feel quick and not annoying. No backend/tech stack details yet, just want the plan turned into features.",
+  "assertions": [
+    {"text": "The run either asks clarifying questions about the missing specifics (onboarding steps, tech stack, definition of 'first meaningful action') or explicitly labels its choices as assumptions/a draft rather than presenting invented specifics as settled requirements", "type": "judgment"},
+    {"text": "If clarifying questions are asked, they target the actual gaps in the prompt (what the onboarding steps are, what platform/stack, what counts as done) rather than generic filler questions", "type": "judgment"},
+    {"text": "The run does not silently fabricate a fully detailed, confident implementation plan (specific tech choices, specific onboarding step content) with no acknowledgment that these were invented", "type": "judgment"},
+    {"text": "If plans/ files are written at all, they are clearly framed as a starting draft for discussion, not a final spec", "type": "judgment"}
+  ]
+}

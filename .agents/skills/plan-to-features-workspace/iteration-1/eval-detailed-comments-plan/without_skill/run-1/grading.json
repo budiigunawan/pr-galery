@@ -1,0 +1,22 @@
+{
+  "expectations": [
+    {"text": "plans/REQUIREMENTS.md exists", "passed": true, "evidence": "File present at plans/REQUIREMENTS.md"},
+    {"text": "plans/features/ contains at least 3 feature files named 'NN - name.md' with zero-padded numbers", "passed": false, "evidence": "7 files created (01-data-model-schema.md ... 07-spam-protection.md) — zero-padded, but using 'NN-name.md' (no spaces around the dash) rather than the 'NN - name.md' pattern the eval specifies"},
+    {"text": "REQUIREMENTS.md contains a feature index linking to each feature file", "passed": true, "evidence": "'## Feature Breakdown' table with 7 rows linking to each 'features/NN-name.md' file"},
+    {"text": "Every feature file has Requirements, Technical Implementation, and Acceptance Criteria sections", "passed": true, "evidence": "grep confirms one each of '## Requirements', '## Technical Implementation', '## Acceptance Criteria' across all 7 files"},
+    {"text": "Acceptance criteria are checklist items ('- [ ]')", "passed": true, "evidence": "5-7 checklist items per file"},
+    {"text": "The 2000-character limit and 20-per-page pagination both appear somewhere in the feature files", "passed": true, "evidence": "02-post-comment.md:16 states max 2000 characters enforced client- and server-side; 03-view-comments-pagination.md covers 20-per-page pagination"},
+    {"text": "The 5-per-10-minutes rate limit and banned-word filter both appear somewhere in the feature files", "passed": true, "evidence": "07-spam-protection.md:6,14-15 states 'a per-user rate limit (5 comments per 10 minutes)' and 'at most 5 comments ... in any rolling 10-minute window'"},
+    {"text": "The '[deleted]' soft-delete behavior and author-vs-self delete permission distinction both appear somewhere", "passed": true, "evidence": "05-delete-comment.md:6-12 distinguishes the post author deleting any comment on their post vs. 'the comment's own author, on their own comment', and describes '[deleted]' rendering"},
+    {"text": "Resend and Prisma/Postgres are referenced in the relevant feature's technical implementation", "passed": true, "evidence": "06-email-notification.md references reusing 'the project's existing Resend helper'; 01/02/05 include concrete prisma.comment.* calls and schema fields"},
+    {"text": "One-level-only nested replies is captured as an explicit constraint", "passed": true, "evidence": "04-nested-replies.md title and body: 'Nested Replies (One Level)' / 'replying to a reply is not allowed', with an explicit depth check in Technical Implementation"}
+  ],
+  "summary": {"passed": 9, "failed": 1, "total": 10, "pass_rate": 0.9},
+  "timing": {"executor_duration_seconds": 248.0},
+  "claims": [
+    {"claim": "The output structure and conventions are the model's own best-judgment interpretation of 'plan-to-features format' with no skill invoked", "type": "process", "verified": true, "evidence": "Agent's own report confirms it did not use the skill, per the baseline task instructions"}
+  ],
+  "eval_feedback": {
+    "overall": "Content coverage is essentially equivalent to the with_skill run — a capable model naturally converges on a similar requirements+features shape and doesn't miss scope details from a well-specified plan. The meaningful gap is structural/format fidelity: naming convention deviates from the skill's exact spec, and REQUIREMENTS.md section names/ordering ('Summary' instead of 'Overview', extra 'Cross-Cutting Acceptance Criteria' and 'High-Level Data Model' sections not in the template) diverge, plus no feature file includes a Dependencies section. This suggests the skill's main value for a detailed, well-specified plan is enforcing a consistent, predictable output contract (useful when handing feature files to multiple sub-agents or teammates) rather than improving content quality, which was already strong."
+  }
+}
