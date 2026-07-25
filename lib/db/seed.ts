@@ -30,7 +30,7 @@ const SEED_PRODUCTS = [
       "Isi ulang (refill) loose leaf ukuran A5. Tersedia dalam berbagai pilihan ketebalan kertas premium dan format isi: bergaris, kotak, polos, dan daily planner.",
     category: "A5",
     imageUrls: [
-      "https://placehold.co/800x800/1F3A2E/FBF9F4?text=Loose+Leaf+A5",
+      "https://placehold.co/800x800/1F3A2E/FBF9F4.png?text=Loose+Leaf+A5",
     ],
     formatOptions: null,
     sortOrder: 0,
@@ -42,7 +42,7 @@ const SEED_PRODUCTS = [
       "Abadikan ide dan catatan pentingmu dalam notebook jilid spiral eksklusif. Tersedia dalam berbagai ukuran dan bebas custom desain cover sesukamu!",
     category: "Custom",
     imageUrls: [
-      "https://placehold.co/800x800/1F3A2E/FBF9F4?text=Notebook+Custom",
+      "https://placehold.co/800x800/1F3A2E/FBF9F4.png?text=Notebook+Custom",
     ],
     formatOptions: null,
     sortOrder: 1,
@@ -54,7 +54,7 @@ const SEED_PRODUCTS = [
       "Buku tulis jilid steples tengah dengan desain cover yang unik dan personal. Cocok untuk buku catatan sekolah, seminar, suvenir acara, atau media promosi bisnismu.",
     category: "Custom",
     imageUrls: [
-      "https://placehold.co/800x800/1F3A2E/FBF9F4?text=Buku+Tulis+Custom",
+      "https://placehold.co/800x800/1F3A2E/FBF9F4.png?text=Buku+Tulis+Custom",
     ],
     formatOptions: null,
     sortOrder: 2,
@@ -66,7 +66,7 @@ const SEED_PRODUCTS = [
       "Hias meja kerjamu dengan kalender duduk personal. Cetak dengan foto, quotes, atau desain buatanmu sendiri. Tersedia dalam ukuran populer A5 dan A6 dengan dudukan (hard cover) yang kokoh dan rapi.",
     category: "A5/A6",
     imageUrls: [
-      "https://placehold.co/800x800/1F3A2E/FBF9F4?text=Kalender+Duduk",
+      "https://placehold.co/800x800/1F3A2E/FBF9F4.png?text=Kalender+Duduk",
     ],
     formatOptions: null,
     sortOrder: 3,
@@ -78,7 +78,7 @@ const SEED_PRODUCTS = [
       "Cetak stiker custom dengan logo jualan, ilustrasi lucu, atau label nama sesuai kebutuhanmu dengan berbagai macam jenis bahan (vinyl, glossy, transparan).",
     category: "Sticker",
     imageUrls: [
-      "https://placehold.co/800x800/1F3A2E/FBF9F4?text=Sticker+Custom",
+      "https://placehold.co/800x800/1F3A2E/FBF9F4.png?text=Sticker+Custom",
     ],
     formatOptions: null,
     sortOrder: 4,
@@ -90,7 +90,7 @@ const SEED_PRODUCTS = [
       "Butuh produk cetak custom lainnya? Kami juga melayani pembuatan amplop custom, buku mewarnai anak, dll. Punya ide produk cetak lain? Hubungi tim kami untuk konsultasi desain dan harga!",
     category: "Lainnya",
     imageUrls: [
-      "https://placehold.co/800x800/1F3A2E/FBF9F4?text=Produk+Lainnya",
+      "https://placehold.co/800x800/1F3A2E/FBF9F4.png?text=Produk+Lainnya",
     ],
     formatOptions: null,
     sortOrder: 5,

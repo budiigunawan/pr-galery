@@ -13,10 +13,10 @@ export const revalidate = 3600;
 
 // Placeholder monogram art until real brand photography/logo art is supplied.
 const HERO_IMAGE_URL =
-  "https://placehold.co/480x600/1F3A2E/FBF9F4?text=PR+Galeri";
+  "https://placehold.co/480x600/1F3A2E/FBF9F4.png?text=PR+Galeri";
 
 const FALLBACK_PRODUCT_IMAGE_URL =
-  "https://placehold.co/800x800/1F3A2E/FBF9F4?text=Produk";
+  "https://placehold.co/800x800/1F3A2E/FBF9F4.png?text=Produk";
 
 function safeWhatsAppLink(rawNumber: string): string | null {
   try {
