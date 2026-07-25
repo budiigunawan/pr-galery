@@ -1,0 +1,78 @@
+- generic [active] [ref=f1e1]:
+  - generic [ref=f1e4]:
+    - generic [ref=f1e5]:
+      - generic [ref=f1e6]:
+        - heading "PRGaleri HomePrinting" [level=2] [ref=f1e7]
+        - paragraph [ref=f1e8]: Crafted with Passion.
+      - paragraph [ref=f1e9]: Refill loose leaf, notebook custom, buku tulis, kalender duduk, hingga stiker custom — dicetak dan dijilid langsung di rumah, dengan perhatian penuh di setiap detail.
+      - link "Hubungi Kami" [ref=f1e10] [cursor=pointer]:
+        - /url: "#contact"
+    - img "Monogram PRGaleri HomePrinting" [ref=f1e13]
+  - generic [ref=f1e17]:
+    - generic [ref=f1e18]:
+      - paragraph [ref=f1e19]: Katalog
+      - heading "Produk Kami" [level=2] [ref=f1e20]
+    - generic [ref=f1e21]:
+      - generic [ref=f1e22]:
+        - img "Loose Leaf A5" [ref=f1e26]
+        - generic [ref=f1e27]: NO. 01 · A5
+        - heading "Loose Leaf A5" [level=3] [ref=f1e28]
+        - paragraph [ref=f1e29]: "Isi ulang (refill) loose leaf ukuran A5. Tersedia dalam berbagai pilihan ketebalan kertas premium dan format isi: bergaris, kotak, polos, dan daily planner."
+      - generic [ref=f1e30]:
+        - img "Notebook custom" [ref=f1e34]
+        - generic [ref=f1e35]: NO. 02 · Custom
+        - heading "Notebook custom" [level=3] [ref=f1e36]
+        - paragraph [ref=f1e37]: Abadikan ide dan catatan pentingmu dalam notebook jilid spiral eksklusif. Tersedia dalam berbagai ukuran dan bebas custom desain cover sesukamu!
+      - generic [ref=f1e38]:
+        - img "Buku Tulis custom" [ref=f1e42]
+        - generic [ref=f1e43]: NO. 03 · Custom
+        - heading "Buku Tulis custom" [level=3] [ref=f1e44]
+        - paragraph [ref=f1e45]: Buku tulis jilid steples tengah dengan desain cover yang unik dan personal. Cocok untuk buku catatan sekolah, seminar, suvenir acara, atau media promosi bisnismu.
+      - generic [ref=f1e46]:
+        - img "Kalender duduk" [ref=f1e50]
+        - generic [ref=f1e51]: NO. 04 · A5/A6
+        - heading "Kalender duduk" [level=3] [ref=f1e52]
+        - paragraph [ref=f1e53]: Hias meja kerjamu dengan kalender duduk personal. Cetak dengan foto, quotes, atau desain buatanmu sendiri. Tersedia dalam ukuran populer A5 dan A6 dengan dudukan (hard cover) yang kokoh dan rapi.
+      - generic [ref=f1e54]:
+        - img "Sticker custom" [ref=f1e58]
+        - generic [ref=f1e59]: NO. 05 · Sticker
+        - heading "Sticker custom" [level=3] [ref=f1e60]
+        - paragraph [ref=f1e61]: Cetak stiker custom dengan logo jualan, ilustrasi lucu, atau label nama sesuai kebutuhanmu dengan berbagai macam jenis bahan (vinyl, glossy, transparan).
+      - generic [ref=f1e62]:
+        - img "Produk cetak lainnya" [ref=f1e66]
+        - generic [ref=f1e67]: NO. 06 · Lainnya
+        - heading "Produk cetak lainnya" [level=3] [ref=f1e68]
+        - paragraph [ref=f1e69]: Butuh produk cetak custom lainnya? Kami juga melayani pembuatan amplop custom, buku mewarnai anak, dll. Punya ide produk cetak lain? Hubungi tim kami untuk konsultasi desain dan harga!
+  - generic [ref=f1e72]:
+    - heading "Ingin punya produk cetak unik dengan ciri khasmu sendiri?" [level=2] [ref=f1e74]
+    - paragraph [ref=f1e75]: Kami melayani cetak satuan tanpa minimum order maupun pesanan grosir dalam jumlah besar, dengan harga yang bersaing dan hasil yang tetap rapi di setiap ukuran pesanan.
+    - paragraph [ref=f1e76]: Yuk, buat produk impianmu sekarang!
+    - link "Yuk, Pesan Sekarang" [ref=f1e77] [cursor=pointer]:
+      - /url: "#contact"
+  - generic [ref=f1e79]:
+    - generic [ref=f1e80]:
+      - paragraph [ref=f1e81]: FAQ
+      - heading "Pertanyaan Umum" [level=2] [ref=f1e82]
+    - generic [ref=f1e83]:
+      - generic [ref=f1e84]:
+        - paragraph [ref=f1e85]: No. 01
+        - heading "Apakah bisa cetak dengan desain sendiri?" [level=3] [ref=f1e86]
+        - paragraph [ref=f1e87]: Tentu saja bisa! Kami siap membantu mewujudkan desain kreatifmu ke dalam berbagai produk cetak yang tersedia di PRGaleri.
+      - generic [ref=f1e88]:
+        - paragraph [ref=f1e89]: No. 02
+        - heading "Apakah bisa pesan satuan?" [level=3] [ref=f1e90]
+        - paragraph [ref=f1e91]: Bisa banget! Kami melayani pemesanan satuan tanpa minimal order, sangat cocok untuk koleksi pribadi atau hadiah spesial.
+  - generic [ref=f1e94]:
+    - heading "Pesan Sekarang" [level=2] [ref=f1e96]
+    - generic [ref=f1e97]:
+      - link "WhatsApp" [ref=f1e98] [cursor=pointer]:
+        - /url: https://wa.me/6285117046472
+      - link "Email" [ref=f1e99] [cursor=pointer]:
+        - /url: mailto:pr.galeri@gmail.com
+      - link "Instagram" [ref=f1e100] [cursor=pointer]:
+        - /url: https://instagram.com/prgaleri
+      - link "Shopee" [ref=f1e101] [cursor=pointer]:
+        - /url: https://shopee.co.id/prgaleri
+    - paragraph [ref=f1e102]: © 2026 PRGaleri HomePrinting
+  - button "Open Next.js Dev Tools" [ref=f1e108] [cursor=pointer]
+  - alert [ref=f1e112]

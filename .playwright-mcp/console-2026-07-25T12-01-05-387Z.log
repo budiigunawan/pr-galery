@@ -1,0 +1,15 @@
+[     379ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2489
+[     420ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2489
+[     561ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=https%3A%2F%2Fplacehold.co%2F480x600%2F1F3A2E%2FFBF9F4%3Ftext%3DPR%2BGaleri&w=1080&q=75:0
+[     568ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=https%3A%2F%2Fplacehold.co%2F800x800%2F1F3A2E%2FFBF9F4%3Ftext%3DKalender%2BDuduk&w=384&q=75:0
+[     573ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=https%3A%2F%2Fplacehold.co%2F800x800%2F1F3A2E%2FFBF9F4%3Ftext%3DLoose%2BLeaf%2BA5&w=384&q=75:0
+[     576ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=https%3A%2F%2Fplacehold.co%2F800x800%2F1F3A2E%2FFBF9F4%3Ftext%3DSticker%2BCustom&w=384&q=75:0
+[     585ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=https%3A%2F%2Fplacehold.co%2F800x800%2F1F3A2E%2FFBF9F4%3Ftext%3DBuku%2BTulis%2BCustom&w=384&q=75:0
+[     600ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=https%3A%2F%2Fplacehold.co%2F800x800%2F1F3A2E%2FFBF9F4%3Ftext%3DNotebook%2BCustom&w=384&q=75:0
+[     633ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3000/_next/image?url=https%3A%2F%2Fplacehold.co%2F800x800%2F1F3A2E%2FFBF9F4%3Ftext%3DProduk%2BLainnya&w=384&q=75:0
+[     680ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2489
+[     680ms] [LOG] [Fast Refresh] done in 102ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2489
+[   71967ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2489
+[   72073ms] [LOG] [Fast Refresh] done in 84ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2489
+[   73272ms] [WARNING] Image with src "https://placehold.co/480x600/1F3A2E/FBF9F4.png?text=PR+Galeri" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2489
