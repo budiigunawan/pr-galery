@@ -1,26 +1,52 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-pine: #1f3a2e;
+  --color-pine-deep: #16281f;
+  --color-kraft: #f1ebdd;
+  --color-paper: #fbf9f4;
+  --color-ink: #2b2a25;
+  --color-stamp: #a8402a;
+
+  --font-display: var(--font-display), serif;
+  --font-sans: var(--font-sans), sans-serif;
+  --font-mono: var(--font-mono), monospace;
+
+  --radius-card: 0.75rem;
+  --shadow-card: 0 2px 8px rgba(43, 42, 37, 0.08);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Faint repeating notebook-ruled lines, low-contrast against a paper/kraft
+   background. Used behind ProductCard content. */
+@utility ruled-bg {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(43, 42, 37, 0.07) 0px,
+    rgba(43, 42, 37, 0.07) 1px,
+    transparent 1px,
+    transparent 28px
+  );
+}
+
+/* Perforated top-edge, like a torn receipt / docket stub. Applied to the top
+   of DocketCard via a scalloped mask cut out of the card edge. */
+@utility docket-edge {
+  position: relative;
+  -webkit-mask-image: radial-gradient(
+    circle at 8px 0px,
+    transparent 7px,
+    black 7.5px
+  );
+  mask-image: radial-gradient(circle at 8px 0px, transparent 7px, black 7.5px);
+  -webkit-mask-size: 16px 100%;
+  mask-size: 16px 100%;
+  -webkit-mask-repeat: repeat-x;
+  mask-repeat: repeat-x;
+  -webkit-mask-position: top left;
+  mask-position: top left;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-kraft);
+  color: var(--color-ink);
 }
