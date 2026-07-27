@@ -8,6 +8,7 @@ import ProductCard from "@/components/ui/ProductCard";
 import DocketCard from "@/components/ui/DocketCard";
 import WashiTapeFrame from "@/components/ui/WashiTapeFrame";
 import Button from "@/components/ui/Button";
+import Nav from "@/components/ui/Nav";
 
 export const revalidate = 3600;
 
@@ -39,6 +40,9 @@ export default async function Home() {
 
   return (
     <>
+      <div id="top" className="docket-edge-top h-4 bg-paper" aria-hidden="true" />
+      <Nav whatsappLink={whatsappLink} />
+
       {/* Hero */}
       <Section tone="kraft" className="overflow-hidden">
         <div className="flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-between">
@@ -68,7 +72,7 @@ export default async function Home() {
       </Section>
 
       {/* Product grid */}
-      <Section tone="paper">
+      <Section tone="paper" id="produk">
         <SectionHeading
           heading="Produk Kami"
           tagline="Katalog"
@@ -123,7 +127,7 @@ export default async function Home() {
       </Section>
 
       {/* FAQ */}
-      <Section tone="kraft">
+      <Section tone="kraft" id="faq">
         <SectionHeading
           heading="Pertanyaan Umum"
           tagline="FAQ"
