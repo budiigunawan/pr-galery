@@ -19,7 +19,7 @@ export default function DocketCard({ question, answer, index, className }: Docke
   return (
     <div
       className={cx(
-        "docket-edge rounded-b-card bg-paper px-6 pb-6 pt-6 shadow-card",
+        "docket-edge rounded-b-card bg-paper px-6 pb-6 pt-6 shadow-card transition-transform duration-200 ease-out [@media(hover:hover)]:hover:rotate-0",
         rotationClass,
         className,
       )}

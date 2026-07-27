@@ -13,6 +13,7 @@ import Button from "@/components/ui/Button";
 import Nav from "@/components/ui/Nav";
 import CatalogTag from "@/components/ui/CatalogTag";
 import ContactRow from "@/components/ui/ContactRow";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export const revalidate = 3600;
 
@@ -101,53 +102,57 @@ export default async function Home() {
 
       {/* Product grid */}
       <Section tone="paper" id="produk">
-        <SectionHeading
-          heading="Produk Kami"
-          tagline="Katalog"
-          taglinePosition="above"
-          tone="light"
-          className="mb-10"
-        />
-        {products.length > 0 ? (
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {products.map((product, index) => (
-              <ProductCard
-                key={product.id}
-                name={product.name}
-                description={product.description}
-                imageUrl={product.imageUrls[0] ?? FALLBACK_PRODUCT_IMAGE_URL}
-                category={product.category}
-                index={index + 1}
-              />
-            ))}
-          </div>
-        ) : (
-          <p className="font-sans text-ink/70">
-            Belum ada produk saat ini. Silakan hubungi kami untuk info produk
-            terbaru.
-          </p>
-        )}
+        <ScrollReveal>
+          <SectionHeading
+            heading="Produk Kami"
+            tagline="Katalog"
+            taglinePosition="above"
+            tone="light"
+            className="mb-10"
+          />
+          {products.length > 0 ? (
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {products.map((product, index) => (
+                <ProductCard
+                  key={product.id}
+                  name={product.name}
+                  description={product.description}
+                  imageUrl={product.imageUrls[0] ?? FALLBACK_PRODUCT_IMAGE_URL}
+                  category={product.category}
+                  index={index + 1}
+                />
+              ))}
+            </div>
+          ) : (
+            <p className="font-sans text-ink/70">
+              Belum ada produk saat ini. Silakan hubungi kami untuk info produk
+              terbaru.
+            </p>
+          )}
+        </ScrollReveal>
       </Section>
 
       {/* Cara Pesan */}
       <Section tone="kraft" id="cara-pesan">
-        <SectionHeading
-          heading="Cara Pesan"
-          tagline="4 Langkah Mudah"
-          taglinePosition="above"
-          tone="light"
-          className="mb-10"
-        />
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {CARA_PESAN_STEPS.map((item, index) => (
-            <TicketStep
-              key={item.title}
-              step={index + 1}
-              title={item.title}
-              description={item.description}
-            />
-          ))}
-        </div>
+        <ScrollReveal>
+          <SectionHeading
+            heading="Cara Pesan"
+            tagline="4 Langkah Mudah"
+            taglinePosition="above"
+            tone="light"
+            className="mb-10"
+          />
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {CARA_PESAN_STEPS.map((item, index) => (
+              <TicketStep
+                key={item.title}
+                step={index + 1}
+                title={item.title}
+                description={item.description}
+              />
+            ))}
+          </div>
+        </ScrollReveal>
       </Section>
 
       {/* Feature / CTA band */}
@@ -177,29 +182,31 @@ export default async function Home() {
 
       {/* FAQ */}
       <Section tone="kraft" id="faq">
-        <SectionHeading
-          heading="Pertanyaan Umum"
-          tagline="FAQ"
-          taglinePosition="above"
-          tone="light"
-          className="mb-10"
-        />
-        {faqItems.length > 0 ? (
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-            {faqItems.map((item, index) => (
-              <DocketCard
-                key={item.id}
-                question={item.question}
-                answer={item.answer}
-                index={index}
-              />
-            ))}
-          </div>
-        ) : (
-          <p className="font-sans text-ink/70">
-            Belum ada pertanyaan yang tercatat.
-          </p>
-        )}
+        <ScrollReveal>
+          <SectionHeading
+            heading="Pertanyaan Umum"
+            tagline="FAQ"
+            taglinePosition="above"
+            tone="light"
+            className="mb-10"
+          />
+          {faqItems.length > 0 ? (
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+              {faqItems.map((item, index) => (
+                <DocketCard
+                  key={item.id}
+                  question={item.question}
+                  answer={item.answer}
+                  index={index}
+                />
+              ))}
+            </div>
+          ) : (
+            <p className="font-sans text-ink/70">
+              Belum ada pertanyaan yang tercatat.
+            </p>
+          )}
+        </ScrollReveal>
       </Section>
 
       {/* Contact / footer */}
