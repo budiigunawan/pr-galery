@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { listActiveProducts } from "@/lib/db/queries/products";
 import { listFaqItems } from "@/lib/db/queries/faq";
 import { getContactInfo } from "@/lib/db/queries/contact";
@@ -11,6 +12,7 @@ import WashiTapeFrame from "@/components/ui/WashiTapeFrame";
 import Button from "@/components/ui/Button";
 import Nav from "@/components/ui/Nav";
 import CatalogTag from "@/components/ui/CatalogTag";
+import ContactRow from "@/components/ui/ContactRow";
 
 export const revalidate = 3600;
 
@@ -205,49 +207,53 @@ export default async function Home() {
         <div className="flex flex-col gap-8">
           <SectionHeading heading="Pesan Sekarang" tone="dark" />
           {contactInfo ? (
-            <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-              {whatsappLink && (
-                <Button
-                  href={whatsappLink}
-                  variant="secondary"
+            <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+              <div className="flex flex-col gap-5 rounded-card bg-paper p-8 shadow-card">
+                {whatsappLink && (
+                  <ContactRow
+                    icon="whatsapp"
+                    href={whatsappLink}
+                    label={contactInfo.whatsappNumber}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  />
+                )}
+                <ContactRow
+                  icon="email"
+                  href={`mailto:${contactInfo.email}`}
+                  label={contactInfo.email}
+                />
+                <ContactRow
+                  icon="instagram"
+                  href={`https://instagram.com/${contactInfo.instagramHandle}`}
+                  label={contactInfo.instagramHandle}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border-paper! text-paper! hover:bg-paper! hover:text-pine-deep!"
-                >
-                  WhatsApp
-                </Button>
-              )}
-              <Button
-                href={`mailto:${contactInfo.email}`}
-                variant="secondary"
-                className="border-paper! text-paper! hover:bg-paper! hover:text-pine-deep!"
-              >
-                Email
-              </Button>
-              <Button
-                href={`https://instagram.com/${contactInfo.instagramHandle}`}
-                variant="secondary"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border-paper! text-paper! hover:bg-paper! hover:text-pine-deep!"
-              >
-                Instagram
-              </Button>
-              <Button
-                href={contactInfo.shopeeUrl}
-                variant="secondary"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border-paper! text-paper! hover:bg-paper! hover:text-pine-deep!"
-              >
-                Shopee
-              </Button>
+                />
+                <ContactRow
+                  icon="shopee"
+                  href={contactInfo.shopeeUrl}
+                  label="Shopee"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                />
+              </div>
+              <div className="flex items-center justify-center rounded-card bg-paper p-8 shadow-card">
+                <Image
+                  src="/logo-mark.png"
+                  alt="PRGaleri HomePrinting"
+                  width={160}
+                  height={160}
+                  className="h-32 w-32 sm:h-40 sm:w-40"
+                />
+              </div>
             </div>
           ) : (
             <p className="font-sans text-paper/70">
               Info kontak akan segera hadir. Silakan pantau media sosial kami.
             </p>
           )}
+          <div className="docket-edge h-4 bg-paper" aria-hidden="true" />
           <p className="font-mono text-xs text-paper/50">
             © 2026 PRGaleri HomePrinting
           </p>
