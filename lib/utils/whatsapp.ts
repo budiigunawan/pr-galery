@@ -7,8 +7,9 @@
  * - International format (already starting with "62") passes through
  *   as-is, e.g. "6285117046472" -> "https://wa.me/6285117046472".
  * - Empty or non-numeric input throws instead of returning a broken link.
+ * - An optional `message` is appended as a URL-encoded `?text=` query param.
  */
-export function toWhatsAppLink(rawNumber: string): string {
+export function toWhatsAppLink(rawNumber: string, message?: string): string {
   const digits = rawNumber.replace(/\D/g, "");
 
   if (digits.length === 0) {
@@ -21,5 +22,24 @@ export function toWhatsAppLink(rawNumber: string): string {
       ? digits
       : `62${digits}`;
 
-  return `https://wa.me/${normalized}`;
+  const base = `https://wa.me/${normalized}`;
+  return message === undefined
+    ? base
+    : `${base}?text=${encodeURIComponent(message)}`;
+}
+
+/**
+ * Same as `toWhatsAppLink`, but returns `null` instead of throwing when the
+ * input number is invalid — useful for call sites that want to render a
+ * fallback rather than crash.
+ */
+export function safeWhatsAppLink(
+  rawNumber: string,
+  message?: string,
+): string | null {
+  try {
+    return toWhatsAppLink(rawNumber, message);
+  } catch {
+    return null;
+  }
 }

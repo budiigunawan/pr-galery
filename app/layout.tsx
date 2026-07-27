@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Karla, JetBrains_Mono } from "next/font/google";
+import { Fraunces, Karla, JetBrains_Mono, Caveat } from "next/font/google";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -18,6 +18,11 @@ const mono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
+const caveat = Caveat({
+  variable: "--font-hand",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   title: "PRGaleri HomePrinting",
   description:
@@ -32,7 +37,7 @@ export default function RootLayout({
   return (
     <html
       lang="id"
-      className={`${fraunces.variable} ${karla.variable} ${mono.variable} h-full antialiased`}
+      className={`${fraunces.variable} ${karla.variable} ${mono.variable} ${caveat.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
