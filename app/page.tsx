@@ -9,6 +9,7 @@ import DocketCard from "@/components/ui/DocketCard";
 import WashiTapeFrame from "@/components/ui/WashiTapeFrame";
 import Button from "@/components/ui/Button";
 import Nav from "@/components/ui/Nav";
+import CatalogTag from "@/components/ui/CatalogTag";
 
 export const revalidate = 3600;
 
@@ -44,15 +45,16 @@ export default async function Home() {
       <Nav whatsappLink={whatsappLink} />
 
       {/* Hero */}
-      <Section tone="kraft" className="overflow-hidden">
+      <Section tone="kraft" className="grid-dots overflow-hidden">
         <div className="flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex max-w-xl flex-col items-center gap-6 text-center lg:items-start lg:text-left">
+            <CatalogTag label="HOME PRINTING · SATUAN & CUSTOM" />
             <SectionHeading
               heading="PRGaleri HomePrinting"
               tagline="Crafted with Passion."
               taglinePosition="below"
               tone="light"
-              className="[&_h2]:text-4xl sm:[&_h2]:text-5xl"
+              className="[&_h2]:text-4xl sm:[&_h2]:text-6xl lg:[&_h2]:text-7xl"
             />
             <p className="font-sans text-base text-ink/70 sm:text-lg">
               Refill loose leaf, notebook custom, buku tulis, kalender duduk,
