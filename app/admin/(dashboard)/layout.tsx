@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import Button from "@/components/ui/Button";
+import AdminNav from "@/components/admin/AdminNav";
 import { logoutAction } from "@/lib/actions/auth";
 
 /**
@@ -20,11 +21,7 @@ export default function AdminDashboardLayout({ children }: { children: ReactNode
             <h1 className="font-display text-xl font-semibold text-ink">PR Galeri</h1>
           </div>
 
-          <nav className="flex items-center gap-6 font-sans text-sm text-ink/60">
-            <span>Produk</span>
-            <span>FAQ</span>
-            <span>Kontak</span>
-          </nav>
+          <AdminNav />
 
           <form action={logoutAction}>
             <Button type="submit" variant="secondary">
