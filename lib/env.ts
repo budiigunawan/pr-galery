@@ -10,5 +10,6 @@ export const env = z
     DATABASE_URL: z.url(),
     ADMIN_PASSWORD: z.string().min(1),
     SESSION_SECRET: z.string().min(32),
+    ADMIN_SESSION_TTL_SECONDS: z.coerce.number().int().positive().default(604800),
   })
   .parse(process.env);
