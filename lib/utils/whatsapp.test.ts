@@ -31,4 +31,16 @@ describe("toWhatsAppLink", () => {
   it("prepends 62 for a number with no country code and no leading 0", () => {
     expect(toWhatsAppLink("85117046472")).toBe("https://wa.me/6285117046472");
   });
+
+  it("appends an encoded ?text= param when a message is provided", () => {
+    expect(
+      toWhatsAppLink("085117046472", "Halo, saya mau pesan Buku Custom A5"),
+    ).toBe(
+      "https://wa.me/6285117046472?text=Halo%2C%20saya%20mau%20pesan%20Buku%20Custom%20A5",
+    );
+  });
+
+  it("omits the ?text= suffix entirely when message is not provided", () => {
+    expect(toWhatsAppLink("085117046472")).not.toContain("?text=");
+  });
 });

@@ -1,5 +1,7 @@
-import PostmarkFrame from "@/components/ui/PostmarkFrame";
-import CatalogTag from "@/components/ui/CatalogTag";
+import PolaroidFrame from '@/components/ui/PolaroidFrame';
+import CatalogTag from '@/components/ui/CatalogTag';
+import Button from '@/components/ui/Button';
+import { safeWhatsAppLink } from '@/lib/utils/whatsapp';
 
 interface ProductCardProps {
   name: string;
@@ -7,26 +9,53 @@ interface ProductCardProps {
   imageUrl: string;
   category: string;
   index: number;
+  whatsappNumber: string | null;
   className?: string;
 }
 
 function cx(...classes: Array<string | undefined>): string {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ');
 }
 
 /**
- * Catalog product tile: postmark-framed photo + catalog tag + name/description
- * over a faint ruled-notebook texture.
+ * Catalog product tile: polaroid-framed photo (handwritten name caption) + catalog tag + description.
  */
-export default function ProductCard({ name, description, imageUrl, category, index, className }: ProductCardProps) {
-  const catalogLabel = `NO. ${String(index).padStart(2, "0")} · ${category}`;
+export default function ProductCard({
+  name,
+  description,
+  imageUrl,
+  category,
+  index,
+  whatsappNumber,
+  className,
+}: ProductCardProps) {
+  const catalogLabel = `NO. ${String(index).padStart(2, '0')} · ${category}`;
+  const tilt = index % 2 === 0 ? 'left' : 'right';
+  const orderLink = whatsappNumber
+    ? safeWhatsAppLink(whatsappNumber, `Halo, saya mau pesan ${name}`)
+    : null;
 
   return (
-    <div className={cx("ruled-bg flex flex-col items-center gap-4 rounded-card bg-paper p-6 text-center shadow-card", className)}>
-      <PostmarkFrame src={imageUrl} alt={name} size={140} />
+    <div
+      className={cx(
+        'group flex flex-col items-center gap-4 text-center',
+        className,
+      )}
+    >
+      <PolaroidFrame src={imageUrl} alt={name} caption={name} tilt={tilt} />
       <CatalogTag label={catalogLabel} />
-      <h3 className="font-display text-xl font-semibold text-ink">{name}</h3>
       <p className="font-sans text-sm text-ink/70">{description}</p>
+      {orderLink && (
+        <Button
+          href={orderLink}
+          variant="primary"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-auto"
+        >
+          Pesan via WhatsApp
+        </Button>
+      )}
     </div>
   );
 }

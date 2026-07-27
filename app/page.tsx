@@ -1,59 +1,51 @@
-import Image from "next/image";
-import { listActiveProducts } from "@/lib/db/queries/products";
-import { listFaqItems } from "@/lib/db/queries/faq";
-import { getContactInfo } from "@/lib/db/queries/contact";
-import { toWhatsAppLink } from "@/lib/utils/whatsapp";
-import Section from "@/components/ui/Section";
-import SectionHeading from "@/components/ui/SectionHeading";
-import ProductCard from "@/components/ui/ProductCard";
-import DocketCard from "@/components/ui/DocketCard";
-import TicketStep from "@/components/ui/TicketStep";
-import WashiTapeFrame from "@/components/ui/WashiTapeFrame";
-import Button from "@/components/ui/Button";
-import Nav from "@/components/ui/Nav";
-import CatalogTag from "@/components/ui/CatalogTag";
-import ContactRow from "@/components/ui/ContactRow";
-import ScrollReveal from "@/components/ui/ScrollReveal";
+import Image from 'next/image';
+import { listActiveProducts } from '@/lib/db/queries/products';
+import { listFaqItems } from '@/lib/db/queries/faq';
+import { getContactInfo } from '@/lib/db/queries/contact';
+import { safeWhatsAppLink } from '@/lib/utils/whatsapp';
+import Section from '@/components/ui/Section';
+import SectionHeading from '@/components/ui/SectionHeading';
+import ProductCard from '@/components/ui/ProductCard';
+import DocketCard from '@/components/ui/DocketCard';
+import TicketStep from '@/components/ui/TicketStep';
+import WashiTapeFrame from '@/components/ui/WashiTapeFrame';
+import Button from '@/components/ui/Button';
+import Nav from '@/components/ui/Nav';
+import CatalogTag from '@/components/ui/CatalogTag';
+import ContactRow from '@/components/ui/ContactRow';
+import ScrollReveal from '@/components/ui/ScrollReveal';
 
 export const revalidate = 3600;
 
 // Placeholder monogram art until real brand photography/logo art is supplied.
 const HERO_IMAGE_URL =
-  "https://placehold.co/480x600/1F3A2E/FBF9F4.png?text=PR+Galeri";
+  'https://prgaleri.my.canva.site/_assets/media/75fa2117ff477bce8fdd718600ca7321.png';
 
 const FALLBACK_PRODUCT_IMAGE_URL =
-  "https://placehold.co/800x800/1F3A2E/FBF9F4.png?text=Produk";
+  'https://placehold.co/800x800/1F3A2E/FBF9F4.png?text=Produk';
 
 const CARA_PESAN_STEPS = [
   {
-    title: "Chat Dulu",
+    title: 'Chat Dulu',
     description:
-      "Hubungi kami via WhatsApp atau kanal kontak lainnya untuk mulai pesan.",
+      'Hubungi kami via WhatsApp atau kanal kontak lainnya untuk mulai pesan.',
   },
   {
-    title: "Sebutkan Detail",
+    title: 'Sebutkan Detail',
     description:
-      "Sebutkan jenis kertas, ukuran, desain custom, dan jumlah — tanpa minimum order.",
+      'Sebutkan jenis kertas, ukuran, desain custom, dan jumlah — tanpa minimum order.',
   },
   {
-    title: "Diproses di Rumah",
+    title: 'Kami Proses',
     description:
-      "Pesanan dicetak dan dijilid langsung di rumah dengan perhatian penuh di setiap detail.",
+      'Pesanan dicetak dan dijilid dengan perhatian penuh di setiap detail.',
   },
   {
-    title: "Ambil / Kirim",
+    title: 'Ambil / Kirim',
     description:
-      "Pesanan siap diambil di tempat atau dikirim sesuai kesepakatan.",
+      'Pesanan siap diambil di tempat atau dikirim sesuai kesepakatan.',
   },
 ];
-
-function safeWhatsAppLink(rawNumber: string): string | null {
-  try {
-    return toWhatsAppLink(rawNumber);
-  } catch {
-    return null;
-  }
-}
 
 export default async function Home() {
   const [products, faqItems, contactInfo] = await Promise.all([
@@ -68,7 +60,11 @@ export default async function Home() {
 
   return (
     <>
-      <div id="top" className="docket-edge-top h-4 bg-paper" aria-hidden="true" />
+      <div
+        id="top"
+        className="docket-edge-top h-4 bg-paper"
+        aria-hidden="true"
+      />
       <Nav whatsappLink={whatsappLink} />
 
       {/* Hero */}
@@ -120,6 +116,7 @@ export default async function Home() {
                   imageUrl={product.imageUrls[0] ?? FALLBACK_PRODUCT_IMAGE_URL}
                   category={product.category}
                   index={index + 1}
+                  whatsappNumber={contactInfo?.whatsappNumber ?? null}
                 />
               ))}
             </div>
@@ -163,9 +160,9 @@ export default async function Home() {
             tone="dark"
           />
           <p className="font-sans text-base text-paper/80 sm:text-lg">
-            Kami melayani cetak satuan tanpa minimum order maupun pesanan
-            grosir dalam jumlah besar, dengan harga yang bersaing dan hasil
-            yang tetap rapi di setiap ukuran pesanan.
+            Kami melayani cetak satuan tanpa minimum order maupun pesanan grosir
+            dalam jumlah besar, dengan harga yang bersaing dan hasil yang tetap
+            rapi di setiap ukuran pesanan.
           </p>
           <p className="font-display text-xl italic text-paper">
             Yuk, buat produk impianmu sekarang!
