@@ -71,7 +71,7 @@ export default async function Home() {
       <Section tone="kraft" className="grid-dots overflow-hidden">
         <div className="flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex max-w-xl flex-col items-center gap-6 text-center lg:items-start lg:text-left">
-            <CatalogTag label="HOME PRINTING · SATUAN & CUSTOM" />
+            <CatalogTag label="CUSTOM PRINTING · SATUAN & GROSIR" />
             <SectionHeading
               heading="PRGaleri HomePrinting"
               tagline="Crafted with Passion."
@@ -81,8 +81,8 @@ export default async function Home() {
             />
             <p className="font-sans text-base text-ink/70 sm:text-lg">
               Refill loose leaf, notebook custom, buku tulis, kalender duduk,
-              hingga stiker custom — dicetak dan dijilid langsung di rumah,
-              dengan perhatian penuh di setiap detail.
+              hingga stiker custom — Kami proses dengan perhatian penuh di
+              setiap detail.
             </p>
             <Button href="#contact" variant="primary">
               Yuk, Pesan Sekarang
