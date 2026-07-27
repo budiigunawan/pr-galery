@@ -6,6 +6,7 @@ import Section from "@/components/ui/Section";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ProductCard from "@/components/ui/ProductCard";
 import DocketCard from "@/components/ui/DocketCard";
+import TicketStep from "@/components/ui/TicketStep";
 import WashiTapeFrame from "@/components/ui/WashiTapeFrame";
 import Button from "@/components/ui/Button";
 import Nav from "@/components/ui/Nav";
@@ -19,6 +20,29 @@ const HERO_IMAGE_URL =
 
 const FALLBACK_PRODUCT_IMAGE_URL =
   "https://placehold.co/800x800/1F3A2E/FBF9F4.png?text=Produk";
+
+const CARA_PESAN_STEPS = [
+  {
+    title: "Chat Dulu",
+    description:
+      "Hubungi kami via WhatsApp atau kanal kontak lainnya untuk mulai pesan.",
+  },
+  {
+    title: "Sebutkan Detail",
+    description:
+      "Sebutkan jenis kertas, ukuran, desain custom, dan jumlah — tanpa minimum order.",
+  },
+  {
+    title: "Diproses di Rumah",
+    description:
+      "Pesanan dicetak dan dijilid langsung di rumah dengan perhatian penuh di setiap detail.",
+  },
+  {
+    title: "Ambil / Kirim",
+    description:
+      "Pesanan siap diambil di tempat atau dikirim sesuai kesepakatan.",
+  },
+];
 
 function safeWhatsAppLink(rawNumber: string): string | null {
   try {
@@ -101,6 +125,27 @@ export default async function Home() {
             terbaru.
           </p>
         )}
+      </Section>
+
+      {/* Cara Pesan */}
+      <Section tone="kraft" id="cara-pesan">
+        <SectionHeading
+          heading="Cara Pesan"
+          tagline="4 Langkah Mudah"
+          taglinePosition="above"
+          tone="light"
+          className="mb-10"
+        />
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {CARA_PESAN_STEPS.map((item, index) => (
+            <TicketStep
+              key={item.title}
+              step={index + 1}
+              title={item.title}
+              description={item.description}
+            />
+          ))}
+        </div>
       </Section>
 
       {/* Feature / CTA band */}
