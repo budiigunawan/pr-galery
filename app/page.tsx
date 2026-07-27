@@ -89,7 +89,7 @@ export default async function Home() {
               dengan perhatian penuh di setiap detail.
             </p>
             <Button href="#contact" variant="primary">
-              Hubungi Kami
+              Yuk, Pesan Sekarang
             </Button>
           </div>
           <WashiTapeFrame
