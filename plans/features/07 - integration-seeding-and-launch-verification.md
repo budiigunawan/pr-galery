@@ -30,9 +30,9 @@ Depends on all of Features 01–06 being complete.
 
 ## Acceptance Criteria
 
-- [ ] `npm run lint`, `npm run typecheck`, `npm run test`, and `npm run build` all pass cleanly with no warnings that indicate real issues.
-- [ ] Real Neon database contains the 6 seeded products, 2 FAQ entries, and 1 contact row, confirmed via `npm run db:studio` or a direct query.
-- [ ] End-to-end manual walkthrough of the public page (mobile + desktop) matches the checklist above with no visual or functional defects.
-- [ ] End-to-end manual walkthrough of the admin CMS (login, create/edit/delete/reorder for products and FAQ, contact upsert, logout, session expiry) matches the checklist above with no defects.
-- [ ] A change made in the admin CMS is confirmed to appear on the public page without requiring a redeploy or manual cache clear.
-- [ ] Any integration issues discovered during this pass (type mismatches, prop-shape mismatches, edge cases missed by earlier features) are fixed and re-verified before sign-off.
+- [x] `npm run lint`, `npm run typecheck`, `npm run test`, and `npm run build` all pass cleanly with no warnings that indicate real issues.
+- [x] Real Neon database contains the 6 seeded products, 2 FAQ entries, and 1 contact row, confirmed via `npm run db:studio` or a direct query.
+- [x] End-to-end manual walkthrough of the public page (mobile + desktop) matches the checklist above with no visual or functional defects.
+- [x] End-to-end manual walkthrough of the admin CMS (login, create/edit/delete/reorder for products and FAQ, contact upsert, logout, session expiry) matches the checklist above with no defects.
+- [x] A change made in the admin CMS is confirmed to appear on the public page without requiring a redeploy or manual cache clear.
+- [x] Any integration issues discovered during this pass (type mismatches, prop-shape mismatches, edge cases missed by earlier features) are fixed and re-verified before sign-off.
