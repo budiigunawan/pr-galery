@@ -6,6 +6,8 @@ PR Galeri HomePrinting is a small Indonesian home-based printing/stationery busi
 
 This plan replaces it with a real Next.js application: a public landing page presenting the product catalog, FAQ, and contact/order info, backed by a lightweight CMS so the owner can add/edit/remove products, FAQ entries, and contact details themselves — no code changes, no redeploys.
 
+**Phase 2 — Landing Page Revamp (features 08–14):** the launch shipped (features 01–07) with hardcoded hero/feature-band copy and generic `placehold.co` placeholder imagery. This phase deepens the existing "paper-craft" visual identity (pine/kraft/stamp, postmark frames, docket cards) rather than replacing it, adds the navigation the page currently lacks, and extracts the business's real hand-illustrated monogram logo (found in reference screenshots `prgaleri-full.png`/`prgaleri-2/3/4.png` at the repo root, never actually wired into the app) so the site's brand mark stops being a placeholder.
+
 ## Goals
 
 - Recreate and improve on the existing Canva site's content (products, FAQ, contact/order info) with a distinctive, purpose-built visual identity for PR Galeri.
@@ -42,8 +44,16 @@ This plan replaces it with a real Next.js application: a public landing page pre
 | 05 | [Admin Authentication](features/05%20-%20admin-authentication.md) | Session signing/verification, auth middleware, login/logout flow |
 | 06 | [Admin CMS: Products, FAQ & Contact Management](features/06%20-%20admin-cms-products-faq-contact.md) | CRUD pages + Server Actions for products, FAQ entries, and the contact-info singleton |
 | 07 | [Integration, Seeding & Launch Verification](features/07%20-%20integration-seeding-and-launch-verification.md) | Seed the real Neon DB, full lint/typecheck/test/build pass, manual browser verification |
+| 08 | [Design Foundations: Brand Mark & Letterhead Nav](features/08%20-%20design-foundations-brand-mark-and-nav.md) | Extract the real PR monogram logo, add tear-edge/dot-grid CSS utilities, build the sticky nav bar |
+| 09 | [Hero Section Revamp](features/09%20-%20hero-section-revamp.md) | Strengthen the hero as a thesis moment: eyebrow tag, scaled heading, dot-grid texture |
+| 10 | [Product Grid Corner Stamp](features/10%20-%20product-grid-corner-stamp.md) | Add the real monogram as a corner "maker's mark" stamp on product photos |
+| 11 | ["Cara Pesan" How-to-Order Section](features/11%20-%20cara-pesan-how-to-order-section.md) | New 4-step ticket-stub section explaining the order process |
+| 12 | [Footer & Contact Revamp](features/12%20-%20footer-and-contact-revamp.md) | Icon+label contact rows, large monogram, closing tear-edge |
+| 13 | [Motion & Micro-interactions](features/13%20-%20motion-and-micro-interactions.md) | Scroll-reveal on sections/cards, `DocketCard` hover-straighten, reduced-motion support |
+| 14 | [Copy Consistency & Revamp QA](features/14%20-%20copy-consistency-and-revamp-qa.md) | Unify CTA button vocabulary site-wide; lint/typecheck/responsive verification pass |
 
 ## Open Questions
 
 - **Real product photography**: none exists yet; the site launches with placeholder images until the owner supplies real photos (swappable via the CMS at any time, no code change needed).
 - **`next.config.ts` `images.remotePatterns`**: plan recommends allowing any `https://` host (`{ protocol: "https", hostname: "**" }`) so `next/image` can optimize arbitrary admin-pasted image URLs. Flagged as a deliberate trust decision (single trusted admin, not public user-generated content) rather than silently assumed.
+- **Logo asset quality (feature 08)**: the only source for the real PR monogram is a raster screenshot of an old Canva mockup, not a vector original. The extracted `public/logo-mark.png` is a best-effort crop, not a redraw — recommend the owner supply a proper vector/high-res export later if this logo becomes permanent.
