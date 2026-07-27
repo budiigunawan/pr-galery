@@ -2,16 +2,11 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { SESSION_COOKIE_NAME, verifySession } from "@/lib/auth/session";
 
-// Node.js runtime is required here (not the default Edge runtime) because
-// lib/auth/session.ts uses crypto.createHmac / crypto.timingSafeEqual,
-// which aren't available in the Edge runtime.
-export const runtime = "nodejs";
-
 export const config = {
   matcher: ["/admin/:path*"],
 };
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   if (request.nextUrl.pathname === "/admin/login") {
     return NextResponse.next();
   }
